@@ -21,3 +21,15 @@ QString Figure::getSymbol() const {
     }
     return "?";
 }
+
+QString Figure::getName() const {
+    switch (type) {
+    case Type::Pawn:   return "Пешка";
+    case Type::Rook:   return "Ладья";
+    case Type::Knight: return "Конь";
+    case Type::Bishop: return "Слон";
+    case Type::Queen:  return "Ферзь";
+    case Type::King:   return "Король";
+    }
+    return "?";
+}
